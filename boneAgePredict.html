@@ -56,6 +56,15 @@
         }
     </style>
     <title>骨齡預測網站</title>
+    <style>
+        #preview {
+            width: 450px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+      </style>
   </head>
 
 
@@ -75,16 +84,36 @@
             <div class="col-sm-6 row justify-content-center" style="height: 60vh; overflow-y:auto; margin-left: 20vh; padding-right: 5vh;">
                 <div class="container  row justify-content-around" style="border-radius: 20px 20px 20px 20px; background-color: #F5F5F5;">
                     <div class="container row justify-content-around" style="padding-top: 8vh;">
-                        <div class="container row justify-content-around" style="width: 30vw; height: 40vh; border: dashed black;">
+                        <!-- <div class="container row justify-content-around" style="width: 30vw; height: 40vh; border: dashed black;"> -->
                             <input id="lefile" type="file" style="display:none"> 
                             <div class="input-append row justify-content-center" style="height: 100%;">  
                                 <a class="btn" onclick="$('input[id=lefile]').click();" style="height: 30vh; width: 50vh; margin-top: 5vh;">
+                                    <img id="preview" style="display:none">
+                                    <script>
+                                        const fileInput = document.getElementById('lefile');
+                                        const preview = document.getElementById('preview');
+                                  
+                                        fileInput.addEventListener('change', () => {
+                                          const file = fileInput.files[0];
+                                          if (file) {
+                                            const reader = new FileReader();
+                                            reader.addEventListener('load', () => {
+                                              preview.src = reader.result;
+                                              preview.style.display = 'inline';
+                                            });
+                                            reader.readAsDataURL(file);
+                                          } else {
+                                            preview.src = '';
+                                            preview.style.display = 'none';
+                                          }
+                                        });
+                                      </script>
                                     <div class="words" class="input-append row justify-content-start">Upload</div>
                                     <div class="words" class="input-append row justify-content-start">Here</div>
                                     <h1>+</h1>
                                 </a> 
                             </div> 
-                        </div>
+                        <!-- </div> -->
                     </div> 
                     <div class="row justify-content-center">
                         <div class="subtitle">骨齡X光片</div> 
