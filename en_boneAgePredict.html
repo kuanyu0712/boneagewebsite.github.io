@@ -144,7 +144,7 @@
             font: normal normal normal 12px/28px Noto Sans CJK TC;
         }
     </style>
-    <title>骨齡預測網站</title>
+    <title>Bone Age Assessments</title>
   </head>
 
 
@@ -157,10 +157,10 @@
             <div class="col-sm" style="margin-top: 5vh; color:rgb(74, 82, 79); background-color: rgb(255, 255, 255);"> <!--Inside columns, we put our actual content.-->
             <!-- A column inside a row inside a container! -->
                 <a href="./index.html"; style = "text-decoration: none;">
-                    <div class = "title">骨齡預測分析</div>  
+                    <div class = "title">Bone Age Assessments</div>  
                 </a>
             </div>
-            <div class="col-6"></div>
+            <div class="col-5"></div>
             <button type="button" class="btn btn-dark justify-content-center" style="width: 5vw; height: 6.5vh; margin-top: 7vh; border-radius: 18px; margin-right: 2vw; padding-bottom: 0.3vw;" data-toggle="modal" data-target="#Documents" data-whatever="@mdo">
                 <div class="word" style="color: #FFFFFF;">
                     Docs
@@ -171,10 +171,10 @@
                     Log In
                 </div>
             </button>
-            <a href="en_boneAgePredict.html" style="width: fit-content;">
+            <a href="boneAgePredict.html" style="width: fit-content;">
                 <button class="btn btn-outline-light justify-content-center" style="margin-right: -4vw; width: 5vw; height: 7vh; margin-top: 6.5vh; border: transparent; background: transparent;">
                     <img src="picture/earth.png" style="width:2vw; margin-top: 0.3vw;">
-                    <div class = "language" >English</div> 
+                    <div class = "language" >Chinese</div> 
                 </button>
             </a>
             <!--Documents part is need to complete-->
@@ -202,8 +202,8 @@
                         <div class="row align-items-center justify-content-center">
                             <div class="col-10" style="padding-top: 5vh;">
                               <div class="list-group list-group-horizontal justify-content-center" id="list-tab" role="tablist"> 
-                                <a class="list-group-item list-group-item-action active col-5" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"><div class="word row justify-content-center" >登入</div></a>
-                                <a class="list-group-item list-group-item-action col-5" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><div class="word row justify-content-center">註冊</div></a>
+                                <a class="list-group-item list-group-item-action active col-5" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"><div class="word row justify-content-center" >Log in</div></a>
+                                <a class="list-group-item list-group-item-action col-5" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><div class="word row justify-content-center">Sign up</div></a>
                               </div>
                             </div>
                         </div>
@@ -213,71 +213,71 @@
                             <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                                 <form class="px-4 py-3 row justify-content-center">
                                     <div class="form-group col-10">
-                                      <label for="exampleDropdownFormEmail1"><div class="word">電子郵件</div></label>
+                                      <label for="exampleDropdownFormEmail1"><div class="word">Email address</div></label>
                                       <input type="email" class="form-control" style="height: 6.5vh; border: 1px solid #707070;" id="exampleDropdownFormEmail1" placeholder="email@example.com">
                                     </div>
                                     <div class="form-group col-10">
-                                      <label for="exampleDropdownFormPassword1"><div class="word">密碼</div></label>
+                                      <label for="exampleDropdownFormPassword1"><div class="word">Password</div></label>
                                       <input type="password" class="form-control" style="height: 6.5vh; border: 1px solid #707070;" id="exampleDropdownFormPassword1" placeholder="Password">
                                     </div>
                                     <div class="col-10 row justify-content-center" style="margin-top: 3vh;">
                                         <button type="submit" data-dismiss="modal" class="btn btn-primary" style="height: 6.5vh; width: 100%; background-color: #FFC033; border:transparent; border-radius: 0px;">
-                                            登入
+                                            Log in
                                         </button>
                                     </div>
                                     <div class="col-10 row justify-content-center" style="margin-top: 1.8vh;">
-                                        <button type="button" class="btn btn-link">忘記密碼?</button>
+                                        <button type="button" class="btn btn-link">Forgotten password?</button>
                                     </div>
                                 </form>
                             </div>
                             <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                                 <form class="px-4 py-3 row justify-content-center">
                                     <div class="form-group col-10">
-                                      <label for="exampleDropdownFormEmail1"><div class="word">會員姓名</div></label>
+                                      <label for="exampleDropdownFormEmail1"><div class="word">Name</div></label>
                                       <input  class="form-control" style="height: 6.5vh; border: 1px solid #707070;" >
                                     </div>
                                     <div class="form-group col-10">
-                                      <label for="exampleDropdownFormPassword1"><div class="word">電話</div></label>
+                                      <label for="exampleDropdownFormPassword1"><div class="word">Mobile phone</div></label>
                                       <input class="form-control" style="height: 6.5vh; border: 1px solid #707070;">
                                     </div>
 
                                     <div class="form-group col-5">
-                                        <label for="exampleFormControlSelect1" ><div class="word">性別</div></label>
+                                        <label for="exampleFormControlSelect1" ><div class="word">Gender</div></label>
                                             <select class="form-control" id="exampleFormControlSelect1" style="height: 6.5vh; border: 1px solid #707070;">
-                                            <option><div class="word">生理男</div></option>
-                                            <option><div class="word">生理女</div></option>
+                                            <option><div class="word">Male</div></option>
+                                            <option><div class="word">Female</div></option>
                                         </select>
                                       </div>
                                       <div class="form-group col-5">
-                                        <label for="exampleFormControlSelect1" ><div class="word">年齡</div></label>
+                                        <label for="exampleFormControlSelect1" ><div class="word">Age</div></label>
                                             <select class="form-control" id="exampleFormControlSelect1" style="height: 6.5vh; border: 1px solid #707070;">
-                                            <option>20歲(含)以下</option>
-                                            <option>21~30歲</option>
-                                            <option>31~40歲</option>
-                                            <option>41~50歲</option>
-                                            <option>51~60歲</option>
-                                            <option>61~70歲</option>
-                                            <option>71~80歲</option>
-                                            <option>80歲以上</option>
+                                            <option>under 20</option>
+                                            <option>21~30</option>
+                                            <option>31~40</option>
+                                            <option>41~50</option>
+                                            <option>51~60</option>
+                                            <option>61~70</option>
+                                            <option>71~80</option>
+                                            <option>over 80</option>
                                         </select>
                                       </div>
                                     
 
                                     <div class="form-group col-10">
-                                        <label for="exampleDropdownFormEmail1"><div class="word">電子郵件</div></label>
+                                        <label for="exampleDropdownFormEmail1"><div class="word">Email address</div></label>
                                         <input type="email" class="form-control" style="height: 6.5vh; border: 1px solid #707070;" id="exampleDropdownFormEmail1" placeholder="email@example.com">
                                     </div>
                                     <div class="form-group col-10">
-                                        <label for="exampleDropdownFormPassword1"><div class="word">密碼</div></label>
+                                        <label for="exampleDropdownFormPassword1"><div class="word">Password</div></label>
                                         <input type="password" class="form-control" style="height: 6.5vh; border: 1px solid #707070;" id="exampleDropdownFormPassword1" placeholder="Password">
                                     </div>
                                     <div class="form-group col-10">
-                                        <label for="exampleDropdownFormPassword1"><div class="word">確認密碼</div></label>
+                                        <label for="exampleDropdownFormPassword1"><div class="word">Confirm password</div></label>
                                         <input type="password" class="form-control" style="height: 6.5vh; border: 1px solid #707070;" id="exampleDropdownFormPassword1" placeholder="Password">
                                     </div>
                                     <div class="col-10 row justify-content-center" style="margin-top: 3vh;">
                                         <button type="submit" data-dismiss="modal" class="btn btn-primary" style="height: 6.5vh; width: 100%; background-color: #FFC033; border:transparent; border-radius: 0px;">
-                                            註冊</button>
+                                            Sign up</button>
                                     </div>
                                 </form>
                             </div>
@@ -286,7 +286,7 @@
                         <div class="col-10 row justify-content-center">
                             <div class="col-4" style="border-bottom: 2px solid #00000029;"></div>
                             <div class="col-4 row justify-content-center">
-                                <div class="word" style="margin-bottom: -12px;">快速登入</div> 
+                                <div class="word" style="margin-bottom: -12px; font-size: smaller;">Quick login</div> 
                             </div>
                             <div class="col-4" style="border-bottom: 2px solid #00000029;"></div>
                         </div>
@@ -363,7 +363,7 @@
                         <!--</div>-->
                     </div> 
                     <div class="row justify-content-center">
-                        <div class="subtitle" style="margin-top: 3vw">骨齡X光片</div> 
+                        <div class="subtitle" style="margin-top: 3vw">hand wrist radiograph</div> 
                     </div>
                 </div>
             </div>
