@@ -324,108 +324,136 @@
             </div>
         </div>
     </div>
-    
-    <div class="container-fluid" style="height: 60vh; margin-top: 10vh; margin-bottom: 15vh;">
-        <div class="row" style="height: 60vh; margin-top: 10vh; margin-bottom: 15vh;">
-            <div class="col-sm-6 row justify-content-center" style="height: 60vh; overflow-y:auto; margin-left: 20vh; padding-right: 5vh;">
-                <div class="container  row justify-content-around" style="border-radius: 20px 20px 20px 20px; background-color: #F5F5F5;">
-                    <div class="container row justify-content-around" style="padding-top: 8vh;">
-                        <!--<div class="container row justify-content-around" style="width: 30vw; height: 40vh; border: dashed black;">-->
-                            <input id="lefile" type="file" style="display:none"> 
-                            <div class="input-append row justify-content-center" style="height: 100%;">  
-                                <a class="btn" onclick="$('input[id=lefile]').click();" style="height: 30vh; width: 50vh; margin-top: 5vh;">
-                                    <!--Display the picture-->
-                                    <img id="preview" style="display:none">
-                                    <script>
-                                        const fileInput = document.getElementById('lefile');
-                                        const preview = document.getElementById('preview');
-                                  
-                                        fileInput.addEventListener('change', () => {
-                                          const file = fileInput.files[0];
-                                          if (file) {
-                                            const reader = new FileReader();
-                                            reader.addEventListener('load', () => {
-                                              preview.src = reader.result;
-                                              preview.style.display = 'inline';
-                                            });
-                                            reader.readAsDataURL(file);
-                                          } else {
-                                            preview.src = '';
-                                            preview.style.display = 'none';
-                                          }
-                                        });
-                                      </script>
-                                    <div class="words" class="input-append row justify-content-start">Upload</div>
-                                    <div class="words" class="input-append row justify-content-start">Here</div>
-                                    <h1>+</h1>
-                                </a> 
+
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+            <div class="container-fluid" style="height: 60vh; margin-top: 10vh; margin-bottom: 15vh;">
+                <div class="row" style="height: 60vh; margin-top: 10vh; margin-bottom: 15vh;" >
+                    <div class="col-sm-6 row justify-content-center" style="height: 60vh; overflow-y:auto; margin-left: 20vh; padding-right: 5vh;">
+                        <div class="container  row justify-content-around" style="border-radius: 20px 20px 20px 20px; background-color: #F5F5F5;">
+                            <div class="container row justify-content-around" style="padding-top: 8vh;">
+                                <!--<div class="container row justify-content-around" style="width: 30vw; height: 40vh; border: dashed black;">-->
+                                    <input id="lefile" type="file" style="display:none"> 
+                                    <div class="input-append row justify-content-center" style="height: 100%;">  
+                                        <a class="btn" onclick="$('input[id=lefile]').click();" style="height: 30vh; width: 50vh; margin-top: 5vh;">
+                                            <!--Display the picture-->
+                                            <img id="preview" style="display:none">
+                                            <script>
+                                                const fileInput = document.getElementById('lefile');
+                                                const preview = document.getElementById('preview');
+                                            
+                                                fileInput.addEventListener('change', () => {
+                                                    const file = fileInput.files[0];
+                                                    if (file) {
+                                                    const reader = new FileReader();
+                                                    reader.addEventListener('load', () => {
+                                                        preview.src = reader.result;
+                                                        preview.style.display = 'inline';
+                                                    });
+                                                    reader.readAsDataURL(file);
+                                                    } else {
+                                                    preview.src = '';
+                                                    preview.style.display = 'none';
+                                                    }
+                                                });
+                                                </script>
+                                            <div class="words" class="input-append row justify-content-start">Upload</div>
+                                            <div class="words" class="input-append row justify-content-start">Here</div>
+                                            <h1>+</h1>
+                                        </a> 
+                                    </div> 
+                                <!--</div>-->
                             </div> 
-                        <!--</div>-->
-                    </div> 
-                    <div class="row justify-content-center">
-                        <div class="subtitle" style="margin-top: 3vw">骨齡X光片</div> 
+                            <div class="row justify-content-center">
+                                <div class="subtitle" style="margin-top: 3vw">骨齡X光片</div> 
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class=" col-3 row justify-content-center" style=" height: 60vh; margin-left: 2.3vw; border-radius: 20px; background-color:  rgba(152, 207, 255,0.59);">
-                <div class="row col-12 justify-content-end" style="overflow:hidden; height: 100%; margin-top: 2vh; padding: 0vw;">
-                    <div class="item" style="height: 0.5vh;">
-                        <div class="filter" style="font-size: 1.1vw;"> <img src="./picture/filter.png"> &nbsp; Filter</div>
-                    </div>
-                    <div class="list-group" style="width: 60vw; padding-right: 1vw; margin-right: -1.2vw; height: 80%; overflow-y: scroll;overflow-x:hidden; background-color: transparent;">
-                        <a  class=" list-group-item list-group-item-action" style="width: 115%; padding-left: 0.5vw; padding-right: 0vw; background-color: transparent; border-color:transparent; border-top: 0.5vh #FFFFFF solid ;">
-                            <div class="row col-12" style="margin-top: 2vh; height: 100%; margin-right: 5vw; padding-right: 0vw;">
-                                <div class="col-4" >
-                                    <label for="exampleFormControlSelect1" >
-                                        <div class="filter" style="font-size: 1.4vw;">演算法</div>
-                                    </label>
+                    
+                    <div class=" col-3 row justify-content-center" style=" height: 60vh; margin-left: 2.3vw; border-radius: 20px; background-color:  rgba(152, 207, 255,0.59);">
+                        <div class="row col-12 justify-content-end" style="overflow:hidden; height: 100%; margin-top: 2vh; padding: 0vw;">
+                            <div class="item" style="height: 0.5vh;">
+                                <div class="filter" style="font-size: 1.1vw;"> <img src="./picture/filter.png"> &nbsp; Filter</div>
+                            </div>
+                            <div class="list-group" style="width: 60vw; padding-right: 1vw; margin-right: -1.2vw; height: 80%; overflow-y: scroll;overflow-x:hidden; background-color: transparent;">
+                                <a  class=" list-group-item list-group-item-action" style="width: 115%; padding-left: 0.5vw; padding-right: 0vw; background-color: transparent; border-color:transparent; border-top: 0.5vh #FFFFFF solid ;">
+                                    <div class="row col-12" style="margin-top: 2vh; height: 100%; margin-right: 5vw; padding-right: 0vw;">
+                                        <div class="col-4" >
+                                            <label for="exampleFormControlSelect1" >
+                                                <div class="filter" style="font-size: 1.4vw;">演算法</div>
+                                            </label>
+                                        </div>
+                                        <div class="col-7" >
+                                            <select class="form-control" id="exampleFormControlSelect1" >
+                                                <option>First</option>
+                                                <option>Second</option>
+                                                <option>Third</option>
+                                                <option>Fourth</option>
+                                                <option>Fiveth</option>
+                                            </select>
+                                        </div>
+                                    </div>  
+                                </a>
+                                <a  class=" list-group-item list-group-item-action" style="width: 115%; padding-left: 0.5vw; padding-right: 0vw; background-color: transparent; border-bottom: 0.5vh #FFFFFF solid ;border-color:transparent; border-top: 0.5vh #FFFFFF solid ;">
+                                    <div class="row col-12" style="margin-top: 2vh; height: 100%; margin-right: 5vw; padding-right: 0vw;">
+                                        <div class="col-4" >
+                                            <label for="exampleFormControlSelect1" >
+                                                <div class="filter" style="font-size: 1.4vw;">模型</div>
+                                            </label>
+                                        </div>
+                                        <div class="col-7" >
+                                            <select class="form-control" id="exampleFormControlSelect1" >
+                                                <option>Type 1</option>
+                                                <option>Type 2</option>
+                                                <option>Type 3</option>
+                                                <option>Type 4</option>
+                                                <option>Type 5</option>
+                                            </select>
+                                        </div>
+                                    </div>  
+                                </a>
+        
+                                <div class="row justify-content-center" style="margin-top: 13vh;">
+                                    <a onclick="document.getElementById('pg').style.visibility = 'visible'; setInterval(setTime, 1000);"class="list-group-item" id="list-update-list" data-toggle="list" href="#list-update" role="tab" aria-controls="update">
+                                        <button type="button" class="btn btn-outline-light">
+                                            <div class="submit">
+                                                送 出
+                                            </div>
+                                        </button>
+                                    </a>
                                 </div>
-                                <div class="col-7" >
-                                    <select class="form-control" id="exampleFormControlSelect1" >
-                                        <option>First</option>
-                                        <option>Second</option>
-                                        <option>Third</option>
-                                        <option>Fourth</option>
-                                        <option>Fiveth</option>
-                                    </select>
-                                </div>
-                            </div>  
-                        </a>
-                        <a  class=" list-group-item list-group-item-action" style="width: 115%; padding-left: 0.5vw; padding-right: 0vw; background-color: transparent; border-bottom: 0.5vh #FFFFFF solid ;border-color:transparent; border-top: 0.5vh #FFFFFF solid ;">
-                            <div class="row col-12" style="margin-top: 2vh; height: 100%; margin-right: 5vw; padding-right: 0vw;">
-                                <div class="col-4" >
-                                    <label for="exampleFormControlSelect1" >
-                                        <div class="filter" style="font-size: 1.4vw;">模型</div>
-                                    </label>
-                                </div>
-                                <div class="col-7" >
-                                    <select class="form-control" id="exampleFormControlSelect1" >
-                                        <option>Type 1</option>
-                                        <option>Type 2</option>
-                                        <option>Type 3</option>
-                                        <option>Type 4</option>
-                                        <option>Type 5</option>
-                                    </select>
-                                </div>
-                            </div>  
-                        </a>
-                        <div class="row justify-content-center" style="margin-top: 16vh;">
-                            <button type="button" class="btn btn-outline-light">
-                                <div class="submit">
-                                    送 出
-                                </div>
-                            </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
+            </div>    
+        </div>
+        <div class="tab-pane fade" id="list-update" role="tabpanel" aria-labelledby="list-update-list">
+            <div class="col-12 row justify-content-center" id="result" style="visibility:hidden;">
+                <img src="picture/result.jpg" style="width: 30%; margin-top: 5vh;">
+                <div class="title" style="padding-top: 28vh; margin-left: 2vw;">pred骨齡值: 166.1個月</div>
+            </div>
+            <div class="col-12 row justify-content-center">
+                <div class="progress" id="pg" style="visibility:hidden; margin: 20px; width: 60%;">
+                    <div id="pg_bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                    <script>
+                    var totalSeconds = 0;
+                    function setTime() {
+                        totalSeconds = totalSeconds+20;
+                        console.log(totalSeconds);
+                        ;document.getElementById("pg_bar").style.width = totalSeconds+"%";
+                        if(totalSeconds>=100){
+                            document.getElementById('pg').style.visibility = 'hidden';
+                            document.getElementById('result').style.visibility = 'visible';
+                        }
+                    }
+                    </script>
+                </div>
             </div>
         </div>
+        </div>    
     </div>
-
-
-
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
